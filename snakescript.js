@@ -4,8 +4,7 @@ const ctx = cvs.getContext("2d");
 const box = 20;
 var scoreDoc = document.getElementById("scoredoc");
 
-const foodImg = new Image();
-foodImg.src = "foodimage.png";
+
 
 var snake = [];
 snake[0] = {
@@ -78,17 +77,35 @@ function draw(){
     if(d == "UP") snakeY-=box;
     if(d == "DOWN") snakeY+=box;
 
+    if(snakeX < 0){
+        snakeX = 18*box;
+    }
+    if(snakeY < 0){
+        snakeY = 18*box;
+    }
+    if(snakeX > 18*box)
+    {
+        snakeX = 0;
+    }
+    if(snakeY > 18*box)
+    {
+        snakeY = 0;
+    }
+
     var newHead = {
         x : snakeX,
         y : snakeY
     }
 
+  
 
-    if(snakeX < 0 || snakeX > 18*box || snakeY < 0 || snakeY > 18*box || collision(newHead, snake))
+
+    if(collision(newHead, snake))
     {
         clearInterval(game);
 
     }
+   
 
    
     snake.unshift(newHead);
@@ -100,7 +117,7 @@ function draw(){
      
 }
 
-var game = setInterval(draw,200);
+var game = setInterval(draw,100);
 
 function dothis()
 {
@@ -112,6 +129,6 @@ function dothis()
     }
     score=0;
     document.getElementById("scoredoc").innerHTML = score;
-    game = setInterval(draw,200);
+    game = setInterval(draw,100);
 }
 
