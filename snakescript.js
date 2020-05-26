@@ -100,7 +100,7 @@ function draw(){
      
 }
 
-var game = setInterval(draw,100);
+var game = setInterval(draw,200);
 
 function dothis()
 {
