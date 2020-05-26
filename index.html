@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SnakeJS</title>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background: #C04848; 
+background: -webkit-linear-gradient(to right, #480048, #C04848); 
+background: linear-gradient(to right, #480048, #C04848);
+
+font-family: 'Chelsea Market', cursive;
+            }
+            #snake{
+                background: #134E5E;  
+background: -webkit-linear-gradient(to right, #71B280, #134E5E);  
+background: linear-gradient(to right, #71B280, #134E5E);
+
+                border: 2px solid black;
+            }
+         #maintab{
+             font-size: 30px;
+             color:white;
+         }
+         #startgame{
+             border: 2px solid black;
+             border-radius: 20px 20px 20px 20px;
+             height:40px;
+             font-size: 20px;
+             font-family: 'Chelsea Market', cursive;
+             width:200px;
+             color: white;
+             outline: none;
+             background: #134E5E;  
+             background: -webkit-linear-gradient(to right, #134E5E, #71B280);  
+             background: linear-gradient(to right, #134E5E, #71B280);
+             transition: all 0.2s;
+             -o-transition: all 0.2s;
+             -moz-transition: all 0.2s;
+         }
+         #wow{
+             color:white;
+         }
+         #startgame:hover{
+            background: #134E5E;  
+background: -webkit-linear-gradient(to right, #71B280, #134E5E); 
+background: linear-gradient(to right, #71B280, #134E5E); 
+
+             color:white;
+         }
+        </style>
+    </head>
+    <body><center>
+
+        <p id="maintab">Score : <span id="scoredoc">0</span></p>
+        <canvas id="snake" width="380" height="380">
+        </canvas><br>
+        <button id="startgame" onclick="dothis()">Start Game</button>
+        <p id="wow">Press Any Arrow Key to Start</p>
+    </center>
+        
+<script src="snakescript.js"></script>
+    </body>
+</html>
