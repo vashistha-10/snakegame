@@ -112,6 +112,6 @@ function dothis()
     }
     score=0;
     document.getElementById("scoredoc").innerHTML = score;
-    game = setInterval(draw,100);
+    game = setInterval(draw,200);
 }
 
